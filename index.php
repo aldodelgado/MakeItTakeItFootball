@@ -25,7 +25,7 @@
 	<title>Make It, Take It Football</title>
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="ui/css/main.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/ui/css/main.css" type="text/css" media="all" />
 
 	<style type="text/css">
 		#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
@@ -33,7 +33,7 @@
 		#sortable li span { position: absolute; margin-left: -1.3em; }
 		#draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
 		#droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
-	</style>	
+	</style>
 	<!-- / Stylesheets -->
 
 	<!-- Javascripts -->
@@ -41,35 +41,35 @@
 	<!-- <script src="ui/js/jquery.min.js" type="text/javascript"></script> -->
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	<!-- <script src="ui/js/jquery-ui.min.js" type="text/javascript"></script> -->
-	<script src="ui/js/jquery.marquee.js" type="text/javascript"></script>		
-	<script src="ui/js/jquery.json-2.2.js" type="text/javascript"></script>
+	<script src="/ui/js/jquery.marquee.js" type="text/javascript"></script>
+	<script src="/ui/js/jquery.json-2.2.js" type="text/javascript"></script>
 	<script language="javascript">
 
-		// Game configuration setup 
+		// Game configuration setup
 		var game_setup = function () {
 
 			// Ask for how many teams are going to play?
-			var teams_count = prompt("How many teams in this game?", "");				
+			var teams_count = prompt("How many teams in this game?", '');
 
 			// Confirm if that was the correct amount of teams
-			if (confirm("You have " + teams_count + " teams?")) {	
+			if (confirm("You have " + teams_count + " teams?")) {
 
 				// Loop through the amount the teams and create the sortables
 				for (team=1; team<=teams_count; team++) {
 					$("#sortable").append('<li class="ui-state-default" style="width:225px;"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Team '+team+' Score 0</li>');
-				}		
+				}
 						
-				// Enter the names of the teams					
-				var downs_count = prompt("How many downs in this game?", "");
+				// Enter the names of the teams
+				var downs_count = prompt("How many downs in this game?", '');
 
 				// Confirm the amount of downs
 				if (confirm("You have " + downs_count + " downs?")) {
 					
-					// Loop through the amount of downs	and create the downs
-					for(down=1; down<=downs_count; down++) {
-						$("#downs_count").append('<img src="ui/images/Football-Ball-icon.png" width="20" height="20" />&nbsp;&nbsp;&nbsp');
+					// Loop through the amount of downs and create the downs
+					for (down=1; down<=downs_count; down++) {
+						$("#downs_count").append('<img src="/ui/images/Football-Ball-icon.png" width="20" height="20" /> &nbsp;&nbsp;&nbsp');
 					}
-				}		
+				}
 
 				var data = new Object();
 				data.teams_count = teams_count;
@@ -77,7 +77,7 @@
 				var dataString = $.toJSON(data);
 				
 				$.post('magic.php', { data: dataString }, function(res) {
-					var obj = $.evalJSON(res);	
+					var obj = $.evalJSON(res);
 					
 					alert(obj.downs_count);
 					//alert(obj.sortable);

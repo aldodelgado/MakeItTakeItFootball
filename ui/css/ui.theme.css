@@ -24,13 +24,13 @@
 #demo-dialog.ui-widget button { font-family: Trebuchet MS,Verdana,Arial,sans-serif; font-size: 1em; }
 
 #widget-docs .ui-widget-header, 
-#demo-dialog .ui-widget-header { border: 1px solid #ffffff; background: #464646 url(ui/images/464646_40x100_textures_01_flat_100.png) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
+#demo-dialog .ui-widget-header { border: 1px solid #ffffff; background: #464646 url(/ui/images/464646_40x100_textures_01_flat_100.png) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
 
 #widget-docs .ui-widget-header a,
 #demo-dialog .ui-widget-header a { color: #ffffff; }
 
 #widget-docs .ui-widget-content,
-#demo-dialog .ui-widget-content { border: 1px solid #ffffff; background: #ffffff url(ui/images/ffffff_40x100_textures_01_flat_75.png) 50% 50% repeat-x; color: #222222; }
+#demo-dialog .ui-widget-content { border: 1px solid #ffffff; background: #ffffff url(/ui/images/ffffff_40x100_textures_01_flat_75.png) 50% 50% repeat-x; color: #222222; }
 
 #widget-docs .ui-widget-content a,
 #demo-dialog .ui-widget-content a { color: #222222; }
@@ -41,7 +41,7 @@
 #widget-docs .ui-state-default, 
 #widget-docs .ui-widget-content .ui-state-default,
 #demo-dialog .ui-state-default, 
-#demo-dialog .ui-widget-content .ui-state-default { border: 1px solid #666666; background: #555555 url(ui/images/555555_40x100_textures_03_highlight_soft_75.png) 50% 50% repeat-x; font-weight: normal; color: #ffffff; outline: none; }
+#demo-dialog .ui-widget-content .ui-state-default { border: 1px solid #666666; background: #555555 url(/ui/images/555555_40x100_textures_03_highlight_soft_75.png) 50% 50% repeat-x; font-weight: normal; color: #ffffff; outline: none; }
 
 #widget-docs .ui-state-default a, 
 #demo-dialog .ui-state-default a { color: #ffffff; text-decoration: none; outline: none; }
@@ -53,7 +53,7 @@
 #demo-dialog .ui-state-hover, 
 #demo-dialog .ui-widget-content .ui-state-hover, 
 #demo-dialog .ui-state-focus, 
-#demo-dialog .ui-widget-content .ui-state-focus { border: 1px solid #666666; background: #444444 url(ui/images/444444_40x100_textures_03_highlight_soft_60.png) 50% 50% repeat-x; font-weight: normal; color: #ffffff; outline: none; }
+#demo-dialog .ui-widget-content .ui-state-focus { border: 1px solid #666666; background: #444444 url(/ui/images/444444_40x100_textures_03_highlight_soft_60.png) 50% 50% repeat-x; font-weight: normal; color: #ffffff; outline: none; }
 
 #widget-docs .ui-state-hover a,
 #demo-dialog .ui-state-hover a { color: #ffffff; text-decoration: none; outline: none; }
@@ -61,7 +61,7 @@
 #widget-docs .ui-state-active, 
 #widget-docs .ui-widget-content .ui-state-active,
 #demo-dialog .ui-state-active, 
-#demo-dialog .ui-widget-content .ui-state-active { border: 1px solid #666666; background: #ffffff url(ui/images/ffffff_40x100_textures_01_flat_65.png) 50% 50% repeat-x; font-weight: normal; color: #F6921E; outline: none; }
+#demo-dialog .ui-widget-content .ui-state-active { border: 1px solid #666666; background: #ffffff url(/ui/images/ffffff_40x100_textures_01_flat_65.png) 50% 50% repeat-x; font-weight: normal; color: #F6921E; outline: none; }
 
 #widget-docs .ui-state-active a,
 #demo-dialog .ui-state-active a { color: #F6921E; outline: none; text-decoration: none; }
@@ -72,12 +72,12 @@
 #widget-docs .ui-state-highlight, 
 #widget-docs .ui-widget-content .ui-state-highlight,
 #demo-dialog .ui-state-highlight, 
-#demo-dialog .ui-widget-content .ui-state-highlight {border: 1px solid #fcefa1; background: #fbf9ee url(ui/images/fbf9ee_40x100_textures_02_glass_55.png) 50% 50% repeat-x; color: #363636; }
+#demo-dialog .ui-widget-content .ui-state-highlight {border: 1px solid #fcefa1; background: #fbf9ee url(/ui/images/fbf9ee_40x100_textures_02_glass_55.png) 50% 50% repeat-x; color: #363636; }
 
 #widget-docs .ui-state-error, 
 #widget-docs .ui-widget-content .ui-state-error, 
 #demo-dialog .ui-state-error, 
-#demo-dialog .ui-widget-content .ui-state-error {border: 1px solid #cd0a0a; background: #fef1ec url(ui/images/fef1ec_40x100_textures_05_inset_soft_95.png) 50% bottom repeat-x; color: #cd0a0a; }
+#demo-dialog .ui-widget-content .ui-state-error {border: 1px solid #cd0a0a; background: #fef1ec url(/ui/images/fef1ec_40x100_textures_05_inset_soft_95.png) 50% bottom repeat-x; color: #cd0a0a; }
 
 #widget-docs .ui-state-error-text, 
 #widget-docs .ui-widget-content .ui-state-error-text,
@@ -106,35 +106,35 @@
 /* states and ui/images */
 #demo-frame-wrapper .ui-icon, 
 #widget-docs .ui-icon,
-#demo-dialog .ui-icon { width: 16px; height: 16px; background-image: url(ui/images/222222_256x240_icons_icons.png); }
+#demo-dialog .ui-icon { width: 16px; height: 16px; background-image: url(/ui/images/222222_256x240_icons_icons.png); }
 
 #widget-docs .ui-widget-content .ui-icon, 
-#demo-dialog .ui-widget-content .ui-icon {background-image: url(ui/images/222222_256x240_icons_icons.png); }
+#demo-dialog .ui-widget-content .ui-icon {background-image: url(/ui/images/222222_256x240_icons_icons.png); }
 
-#widget-docs .ui-widget-header .ui-icon {background-image: url(ui/images/222222_256x240_icons_icons.png); }
-#demo-dialog .ui-widget-header .ui-icon {background-image: url(ui/images/ui-icons_aaaaaa_256x240.png); }
+#widget-docs .ui-widget-header .ui-icon {background-image: url(/ui/images/222222_256x240_icons_icons.png); }
+#demo-dialog .ui-widget-header .ui-icon {background-image: url(/ui/images/ui-icons_aaaaaa_256x240.png); }
 
 #widget-docs .ui-state-default .ui-icon,
-#demo-dialog .ui-state-default .ui-icon { background-image: url(ui/images/888888_256x240_icons_icons.png); }
+#demo-dialog .ui-state-default .ui-icon { background-image: url(/ui/images/888888_256x240_icons_icons.png); }
 
 #widget-docs .ui-state-hover .ui-icon, 
 #widget-docs .ui-state-focus .ui-icon,
 #demo-dialog .ui-state-hover .ui-icon, 
-#demo-dialog .ui-state-focus .ui-icon {background-image: url(ui/images/454545_256x240_icons_icons.png); }
+#demo-dialog .ui-state-focus .ui-icon {background-image: url(/ui/images/454545_256x240_icons_icons.png); }
 
 #demo-dialog .ui-widget-header .ui-state-hover .ui-icon, 
-#demo-dialog .ui-widget-header .ui-state-focus .ui-icon {background-image: url(ui/images/ui-icons_aaaaaa_256x240.png); }
+#demo-dialog .ui-widget-header .ui-state-focus .ui-icon {background-image: url(/ui/images/ui-icons_aaaaaa_256x240.png); }
 
 #widget-docs .ui-state-active .ui-icon,
-#demo-dialog .ui-state-active .ui-icon {background-image: url(ui/images/454545_256x240_icons_icons.png); }
+#demo-dialog .ui-state-active .ui-icon {background-image: url(/ui/images/454545_256x240_icons_icons.png); }
 
 #widget-docs .ui-state-highlight .ui-icon,
-#demo-dialog .ui-state-highlight .ui-icon {background-image: url(ui/images/2e83ff_256x240_icons_icons.png); }
+#demo-dialog .ui-state-highlight .ui-icon {background-image: url(/ui/images/2e83ff_256x240_icons_icons.png); }
 
 #widget-docs .ui-state-error .ui-icon, 
 #widget-docs .ui-state-error-text .ui-icon,
 #demo-dialog .ui-state-error .ui-icon, 
-#demo-dialog .ui-state-error-text .ui-icon {background-image: url(ui/images/cd0a0a_256x240_icons_icons.png); }
+#demo-dialog .ui-state-error-text .ui-icon {background-image: url(/ui/images/cd0a0a_256x240_icons_icons.png); }
 
 
 /* Misc visuals
@@ -171,7 +171,7 @@
 
 /* Overlays */
 #widget-docs .ui-widget-overlay,
-#demo-dialog .ui-widget-overlay { background: #aaaaaa url(ui/images/aaaaaa_40x100_textures_01_flat_0.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); }
+#demo-dialog .ui-widget-overlay { background: #aaaaaa url(/ui/images/aaaaaa_40x100_textures_01_flat_0.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); }
 
 #widget-docs .ui-widget-shadow,
-#demo-dialog .ui-widget-shadow { margin: -8px 0 0 -8px; padding: 8px; background: #aaaaaa url(ui/images/aaaaaa_40x100_textures_01_flat_0.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); -moz-border-radius: 8px; -webkit-border-radius: 8px; }
+#demo-dialog .ui-widget-shadow { margin: -8px 0 0 -8px; padding: 8px; background: #aaaaaa url(/ui/images/aaaaaa_40x100_textures_01_flat_0.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); -moz-border-radius: 8px; -webkit-border-radius: 8px; }
