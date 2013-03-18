@@ -1,9 +1,9 @@
 <?php
 /*
-	Make-It Take-It Football by Aldo Delgado aldo@osstek.com
+	Make It, Take It Football by Aldo Delgado aldo@osstek.com
 
 	Game Description:
-		What does this app do? Well this is a widget for the feild game Make-It Take-It Football. This widget is to assist you with organizing and managing the teams and keep score of the game. To configure your widget please set the amount of teams you want to have play and the amounts of downs per game. 
+		What does this app do? Well this is a widget for the feild game Make It, Take It Football. This widget is to assist you with organizing and managing the teams and keep score of the game. To configure your widget please set the amount of teams you want to have play and the amounts of downs per game. 
 
 	Game Rules:
 
@@ -22,7 +22,7 @@
 
 <html>
 <head>
-	<title>Make-it Take-it Football Widget</title>
+	<title>Make It, Take It Football</title>
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="ui/css/main.css" type="text/css" media="all" />
@@ -31,23 +31,23 @@
 		#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
 		#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
 		#sortable li span { position: absolute; margin-left: -1.3em; }
-	</style>
-
-	<style>
 		#draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
 		#droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
 	</style>	
 	<!-- / Stylesheets -->
 
 	<!-- Javascripts -->
-	<script src="ui/js/jquery.min.js" type="text/javascript"></script>
-	<script src="ui/js/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<!-- <script src="ui/js/jquery.min.js" type="text/javascript"></script> -->
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+	<!-- <script src="ui/js/jquery-ui.min.js" type="text/javascript"></script> -->
 	<script src="ui/js/jquery.marquee.js" type="text/javascript"></script>		
 	<script src="ui/js/jquery.json-2.2.js" type="text/javascript"></script>
 	<script language="javascript">
 
 		// Game configuration setup 
 		var game_setup = function () {
+
 			// Ask for how many teams are going to play?
 			var teams_count = prompt("How many teams in this game?", "");				
 
@@ -55,8 +55,8 @@
 			if (confirm("You have " + teams_count + " teams?")) {	
 
 				// Loop through the amount the teams and create the sortables
-				for (i=1;i i<=teams_count; i++) {
-					$("#sortable").append('<li class="ui-state-default" style="width:225px;"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Team # Score #</li>');
+				for (team=1; team<=teams_count; team++) {
+					$("#sortable").append('<li class="ui-state-default" style="width:225px;"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Team '+team+' Score 0</li>');
 				}		
 						
 				// Enter the names of the teams					
@@ -66,8 +66,8 @@
 				if (confirm("You have " + downs_count + " downs?")) {
 					
 					// Loop through the amount of downs	and create the downs
-					for(i=1;i <= downs_count;i++) {
-						$("#downs_count").append('<img src="ui/images/Football-Ball-icon.png" width="20" height="20"/>&nbsp;&nbsp;&nbsp');
+					for(down=1; down<=downs_count; down++) {
+						$("#downs_count").append('<img src="ui/images/Football-Ball-icon.png" width="20" height="20" />&nbsp;&nbsp;&nbsp');
 					}
 				}		
 
@@ -76,32 +76,30 @@
 				data.downs_count = downs_count;
 				var dataString = $.toJSON(data);
 				
-				$.post('magic.php', {data: dataString}, function(res) {
+				$.post('magic.php', { data: dataString }, function(res) {
 					var obj = $.evalJSON(res);	
+					
 					alert(obj.downs_count);
 					//alert(obj.sortable);
+					
 					$("#downs_count").html(obj.downs_count);
 					$("#sortable").html(obj.sortable);
+					
 					return true;
 				});
 			}
 		}
 
-		// Sortable
 		$(function() {
+			// Sortable
 			$( "#sortable" ).sortable();
 			$( "#sortable" ).disableSelection();
-		});
-
-		// Draggable
-		$(function() {
+			
+			// Draggable
 			$( "#draggable" ).draggable();
 			$( "#droppable" ).droppable({
 				drop: function( event, ui ) {
-					$( this )
-						.addClass( "ui-state-highlight" )
-						.find( "p" )
-						.html( "Dropped!" );
+					$( this ).addClass( "ui-state-highlight" ).find( "p" ).html( "Dropped!" );
 				}
 			});
 		});
